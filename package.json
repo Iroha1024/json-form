@@ -1,0 +1,24 @@
+{
+  "name": "json-form",
+  "version": "0.1.0",
+  "description": "转换json与form",
+  "author": "iroha1024",
+  "module": "dist/json-form.esm.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "format": "prettier --write --parser typescript \"src/**/*.ts?(x)\"",
+    "dev": "cross-env NODE_ENV=development rollup -wc",
+    "build": "cross-env NODE_ENV=production rollup -c"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
+    "rollup": "^1.31.1",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-postcss": "^2.1.1",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "typescript": "^3.8.2"
+  }
+}
