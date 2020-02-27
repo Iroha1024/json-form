@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "target": "esnext",
     "module": "esnext",
+    "allowJs": true,
     "lib": ["esnext", "dom"],
     "strict": true,
     "moduleResolution": "node",

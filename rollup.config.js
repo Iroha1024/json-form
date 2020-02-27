@@ -1,5 +1,9 @@
 import typescript from 'rollup-plugin-typescript2'
 import postcss from 'rollup-plugin-postcss'
+import resolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
+import svelte from 'rollup-plugin-svelte'
+import copy from 'rollup-plugin-copy'
 import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
 
@@ -10,10 +14,14 @@ const isDevelopment = process.env.NODE_ENV === 'development'
 const developmentPlugin = () => {
   if (!isDevelopment) return []
   const plugin = [
+    copy({
+      targets: [
+        { src: 'example/index.html', dest: 'dist' },
+      ]
+    }),
     serve({
       open: true,
-      openPage: '/example/',
-      contentBase: '',
+      contentBase: 'dist',
       port: '8080'
     }),
     livereload()
@@ -28,7 +36,12 @@ export default {
     format: 'es'
   },
   plugins: [
-    typescript(),
+    resolve(),
+    commonjs(),
+    svelte(),
+    typescript({
+      clean: true
+    }),
     postcss(),
     ...developmentPlugin()
   ]

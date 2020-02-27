@@ -2,17 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>json form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json form</title>
 </head>
 
 <body>
-  <div id="app"></div>
-  <script type="module">
-    import { jsonForm } from '../dist/json-form.esm.js'
-    jsonForm('#app')
-  </script>
+    <div id="app"></div>
+    <script type="module">
+        import { jsonForm } from './json-form.esm.js'
+        jsonForm('#app', `
+        [
+            {
+                "name": {
+                    "name": "名字",
+                    "value": "iroha",
+                    "type": "string"
+                },
+                "learning": {
+                    "name": "学习中",
+                    "value": false,
+                    "type": "boolean"
+                },
+                "color": {
+                    "name": "颜色",
+                    "value": "#f45838",
+                    "type": "color"
+                }
+            },
+            {
+                "name": {
+                    "name": "名字",
+                    "value": "iroha1024",
+                    "type": "string"
+                },
+                "learning": {
+                    "name": "学习中",
+                    "value": true,
+                    "type": "boolean"
+                },
+                "color": {
+                    "name": "颜色",
+                    "value": "#ccc",
+                    "type": "color"
+                }
+            }
+        ]`)
+    </script>
 </body>
 
 </html>
