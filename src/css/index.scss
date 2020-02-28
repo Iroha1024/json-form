@@ -1,0 +1,33 @@
+@import './scrollbar.scss';
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+.json-form__wrapper {
+    overflow: scroll;
+    box-shadow: 0px 0px 5px 2px #ccc;
+}
+
+.json-form {
+    display: table;
+    border-collapse: collapse;
+    font-size: 25px;
+    &__top-bar {
+        display: table-header-group;
+    }
+    &__data-area {
+        display: table-row-group;
+        &__row {
+            display: table-row;
+        }
+    }
+    .col {
+        display: table-cell;
+        border: 1px solid #ccc;
+        padding: 5px;
+        max-width: 250px;
+        overflow-wrap: break-word;
+    }
+}
