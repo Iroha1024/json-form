@@ -3,12 +3,11 @@
     export let key
     export let data
 
-    let div
     let { editable } = options
-
-    function input() {
-        data[key].value = div.textContent
-    }
 </script>
 
-<div class={$$props.class} bind:this={div} contenteditable={editable} on:input={input}>{data[key].value}</div>
+{#if editable}
+    <div class={$$props.class} contenteditable bind:innerHTML={data[key].value} />
+{:else}
+    <div class={$$props.class} contenteditable="false" bind:innerHTML={data[key].value} />
+{/if}

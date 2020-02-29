@@ -1,4 +1,5 @@
-@import './scrollbar.scss';
+@import './scrollbar';
+@import './function';
 
 #app {
     display: flex;
@@ -26,8 +27,55 @@
     .col {
         display: table-cell;
         border: 1px solid #ccc;
-        padding: 5px;
+        padding: 8px 5px;
         max-width: 250px;
         overflow-wrap: break-word;
+    }
+}
+
+$deg: 45deg;
+$w: 36px;
+$h: 2 / 3 * $w;
+$border: 1 / 10 * $w;
+$border-color: #24f37d;
+
+$width: ($w - $h * tan($deg)) / cos($deg);
+$height: $h / cos($deg);
+
+.choice-box {
+    width: $w;
+    height: $h;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    .check-mark {
+        visibility: hidden;
+        box-sizing: border-box;
+        width: $width;
+        height: $height;
+        border-right: $border solid $border-color;
+        border-top: $border solid $border-color;
+        transform-origin: top left;
+        transform: translateY($h - $w * tan($deg) + $h * tan($deg) * tan($deg)) scaleY(-1) rotate(-$deg);
+    }
+    .show {
+        visibility: visible;
+        animation: show 0.6s ease;
+    }
+}
+
+@keyframes show {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    50% {
+        width: $width;
+        height: 0;
+    }
+    100% {
+        width: $width;
+        height: $height;
     }
 }
