@@ -27,8 +27,9 @@
     .col {
         display: table-cell;
         border: 1px solid #ccc;
-        padding: 8px 5px;
         max-width: 250px;
+        padding: 10px 8px;
+        vertical-align: middle;
         overflow-wrap: break-word;
     }
 }
@@ -57,7 +58,7 @@ $height: $h / cos($deg);
         border-right: $border solid $border-color;
         border-top: $border solid $border-color;
         transform-origin: top left;
-        transform: translateY($h - $w * tan($deg) + $h * tan($deg) * tan($deg)) scaleY(-1) rotate(-$deg);
+        transform: translate(1 / 12 * $w, $h - $w * tan($deg) + $h * tan($deg) * tan($deg)) scaleY(-1) rotate(-$deg);
     }
     .show {
         visibility: visible;
@@ -78,4 +79,9 @@ $height: $h / cos($deg);
         width: $width;
         height: $height;
     }
+}
+
+.pickr {
+    display: flex;
+    justify-content: center;
 }

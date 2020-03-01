@@ -1,3 +1,5 @@
+//function form https://www.unindented.org/blog/trigonometry-in-sass/
+
 @function fact($number) {
     $value: 1;
     @if $number > 0 {

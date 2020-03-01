@@ -32,6 +32,7 @@ const developmentPlugin = () => {
 export default {
   input: 'src/index.ts',
   output: {
+    sourcemap: true,
     file: pkg.module,
     format: 'es'
   },
