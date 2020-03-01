@@ -1,5 +1,5 @@
-<div class={$$props.class} on:click={click}>
-    <div class="choice-box">
+<div class={$$props.class}>
+    <div class="choice-box" on:click={click}>
         {#if data[key].value}
             <div class="check-mark show" out:fade />
         {/if}

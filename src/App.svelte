@@ -1,23 +1,22 @@
 <div class="json-form__wrapper" style="width: {width}px; height: {height}px">
-    <div class="json-form">
-        <TopBar bind:json />
-        <DataArea bind:json bind:options />
+    {#if editable}
+        <SideBar bind:json />
+    {/if}
+    <div class="json-form__main">
+        <div class="json-form">
+            <TopBar bind:json />
+            <DataArea bind:json bind:options />
+        </div>
     </div>
 </div>
 
-<button
-    on:click={() => {
-        console.log(JSON.stringify(json, null, 2))
-    }}>
-    显示json
-</button>
-
 <script>
     import TopBar from './components/topBar/index.svelte'
+    import SideBar from './components/sideBar/index.svelte'
     import DataArea from './components/dataArea/index.svelte'
 
     export let json
     export let options
 
-    let { width, height } = options
+    let { width, height, editable } = options
 </script>

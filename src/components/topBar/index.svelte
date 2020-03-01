@@ -1,6 +1,6 @@
 <div class="json-form__top-bar">
     {#each colList as { name }}
-        <div class="col">{name}</div>
+        <div class="json-form__top-bar__col col">{name}</div>
     {/each}
 </div>
 

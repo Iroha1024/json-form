@@ -6,31 +6,66 @@
     justify-content: center;
 }
 
-.json-form__wrapper {
-    overflow: scroll;
-    box-shadow: 0px 0px 5px 2px #ccc;
-}
+$border: 1px;
+$border-color: #ccc;
 
-.json-form {
-    display: table;
-    border-collapse: collapse;
-    font-size: 25px;
-    &__top-bar {
-        display: table-header-group;
-    }
-    &__data-area {
-        display: table-row-group;
-        &__row {
-            display: table-row;
+.json-form__wrapper {
+    box-shadow: 0px 0px 5px 2px #ccc;
+    display: flex;
+    .json-form__side-bar {
+        width: 60px;
+        height: inherit;
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        border: $border solid $border-color;
+        & > div {
+            padding-top: 10px;
+            cursor: pointer;
+            &:hover {
+                background: #ccc;
+            }
+        }
+        .icon-add-row {
+            font-size: 50px;
+        }
+        .icon-add-col {
+            font-size: 50px;
+        }
+        .icon-json {
+            font-size: 20px;
         }
     }
-    .col {
-        display: table-cell;
-        border: 1px solid #ccc;
-        max-width: 250px;
-        padding: 10px 8px;
-        vertical-align: middle;
-        overflow-wrap: break-word;
+    .json-form__main {
+        width: inherit;
+        overflow: scroll;
+        .json-form {
+            display: table;
+            border-collapse: collapse;
+            font-size: 25px;
+            &__top-bar {
+                display: table-header-group;
+                &__col {
+                    white-space: nowrap;
+                }
+            }
+            &__data-area {
+                display: table-row-group;
+                &__row {
+                    display: table-row;
+                }
+            }
+            .col {
+                display: table-cell;
+                border: $border solid $border-color;
+                max-width: 250px;
+                padding: 10px 8px;
+                vertical-align: middle;
+                overflow-wrap: break-word;
+                &:first-child {
+                    border-left: 0;
+                }
+            }
+        }
     }
 }
 
