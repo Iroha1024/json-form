@@ -1,3 +1,7 @@
+<div class={$$props.class}>
+    <div bind:this={colorPicker} />
+</div>
+
 <script>
     import Pickr from '@simonwep/pickr'
     import { onMount } from 'svelte'
@@ -68,7 +72,3 @@
             })
     })
 </script>
-
-<div class={$$props.class}>
-    <div bind:this={colorPicker} />
-</div>

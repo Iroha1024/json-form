@@ -1,13 +1,3 @@
-<script>
-    import TopBar from './components/topBar.svelte'
-    import DataArea from './components/dataArea.svelte'
-
-    export let json
-    export let options
-
-    let { width, height } = options
-</script>
-
 <div class="json-form__wrapper" style="width: {width}px; height: {height}px">
     <div class="json-form">
         <TopBar bind:json />
@@ -21,3 +11,13 @@
     }}>
     显示json
 </button>
+
+<script>
+    import TopBar from './components/topBar/index.svelte'
+    import DataArea from './components/dataArea/index.svelte'
+
+    export let json
+    export let options
+
+    let { width, height } = options
+</script>

@@ -1,3 +1,9 @@
+<div class="json-form__top-bar">
+    {#each colList as { name }}
+        <div class="col">{name}</div>
+    {/each}
+</div>
+
 <script>
     export let json
 
@@ -7,9 +13,3 @@
         type,
     }))
 </script>
-
-<div class="json-form__top-bar">
-    {#each colList as { name }}
-        <div class="col">{name}</div>
-    {/each}
-</div>
