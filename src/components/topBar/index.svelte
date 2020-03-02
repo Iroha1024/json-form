@@ -7,7 +7,7 @@
 <script>
     export let json
 
-    const colList = Object.entries(json[0]).map(([key, { name, type }]) => ({
+    $: colList = Object.entries(json[0]).map(([key, { name, type }]) => ({
         key,
         name,
         type,

@@ -14,18 +14,7 @@
 </div>
 
 <script>
-    import ContentEdit from './contentEdit.svelte'
-    import ChoiceBox from './choiceBox.svelte'
-    import ColorPicker from './colorPicker.svelte'
-
-    function getComponent(type) {
-        const map = new Map([
-            ['string', ContentEdit],
-            ['boolean', ChoiceBox],
-            ['color', ColorPicker],
-        ])
-        return map.get(type)
-    }
+    import { getComponent } from './compImport'
 
     export let json
     export let options

@@ -9,6 +9,8 @@
 </div>
 
 <script>
+    import { message } from '../../store'
+
     export let json
 
     function addRow() {
@@ -30,5 +32,22 @@
         json = [...json, data]
     }
 
-    function addCol() {}
+    function addCol() {
+        message.set({
+            type: 'addCol',
+            title: '新增一列',
+            value: null,
+            fn: () => {
+                json = json.map(row => {
+                    const { key, name, type, value } = $message.value
+                    row[key] = {
+                        name,
+                        type,
+                        value,
+                    }
+                    return row
+                })
+            },
+        })
+    }
 </script>

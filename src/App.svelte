@@ -8,12 +8,14 @@
             <DataArea bind:json bind:options />
         </div>
     </div>
+    <MessageBox />
 </div>
 
 <script>
     import TopBar from './components/topBar/index.svelte'
     import SideBar from './components/sideBar/index.svelte'
     import DataArea from './components/dataArea/index.svelte'
+    import MessageBox from './components/messageBox/index.svelte'
 
     export let json
     export let options

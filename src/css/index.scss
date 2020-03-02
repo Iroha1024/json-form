@@ -12,10 +12,9 @@ $border-color: #ccc;
 .json-form__wrapper {
     box-shadow: 0px 0px 5px 2px #ccc;
     display: flex;
+    font-size: 25px;
     .json-form__side-bar {
         width: 60px;
-        height: inherit;
-        box-sizing: border-box;
         flex: 0 0 auto;
         border: $border solid $border-color;
         & > div {
@@ -41,7 +40,6 @@ $border-color: #ccc;
         .json-form {
             display: table;
             border-collapse: collapse;
-            font-size: 25px;
             &__top-bar {
                 display: table-header-group;
                 &__col {
@@ -63,6 +61,79 @@ $border-color: #ccc;
                 overflow-wrap: break-word;
                 &:first-child {
                     border-left: 0;
+                }
+            }
+        }
+    }
+    .message-box__wrapper {
+        position: fixed;
+        width: inherit;
+        height: inherit;
+        background-color: #0000001c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .message-box {
+            width: 300px;
+            min-height: 150px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            header {
+                font-size: 25px;
+            }
+            main {
+                padding: 10px 5px;
+                display: flex;
+                flex-direction: column;
+                label {
+                    display: flex;
+                    padding-bottom: 25px;
+                    position: relative;
+                    input,
+                    div[contenteditable] {
+                        height: 25px;
+                        padding: 0 5px;
+                        border-radius: 5px;
+                        border: $border solid $border-color;
+                        cursor: text;
+                    }
+                    .advice {
+                        position: absolute;
+                        bottom: 0;
+                        margin: 0;
+                        color: #f74343;
+                        left: 70px;
+                    }
+                    select {
+                        width: 180px;
+                        padding: 3px 5px;
+                        font-size: inherit;
+                    }
+                    .data-component {
+                        width: 180px;
+                        height: 30px !important;
+                    }
+                }
+            }
+            footer {
+                display: flex;
+                justify-content: center;
+                .button {
+                    border-radius: 5px;
+                    padding: 5px 15px;
+                    margin: 0 20px;
+                    color: #fff;
+                    cursor: pointer;
+                    &--confirm {
+                        background-color: #409eff;
+                    }
+                    &--cancel {
+                        background-color: #f55c5c;
+                    }
                 }
             }
         }
