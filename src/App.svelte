@@ -8,7 +8,7 @@
             <DataArea bind:json bind:options />
         </div>
     </div>
-    <MessageBox />
+    <MessageBox {json} />
 </div>
 
 <script>

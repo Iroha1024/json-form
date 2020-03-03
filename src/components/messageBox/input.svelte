@@ -2,24 +2,34 @@
     <span>{description}：</span>
     <input type="text" bind:value on:input={check} />
     {#if error}
-        <p class="advice">{advice}</p>
+        <p class="advice">{suggestion}</p>
     {/if}
 </label>
 
 <script>
     export let description
-    export let regexp
-    export let advice
+    export let ruleList
     export let value
     export let isValidated
 
-    $: error = !regexp.test(value)
+    let suggestion, error
+
+    function isRegExp(val) {
+        return Object.prototype.toString.call(val) === '[object RegExp]'
+    }
 
     function check() {
-        if (regexp.test(value)) {
-            isValidated = true
-        } else {
-            isValidated = false
+        for (const { rule, advice } of ruleList) {
+            if (isRegExp(rule)) {
+                isValidated = rule.test(value)
+            } else if (Array.isArray(rule)) {
+                isValidated = !rule.includes(value)
+            }
+            error = !isValidated
+            if (error) {
+                suggestion = advice
+                return
+            }
         }
     }
 </script>

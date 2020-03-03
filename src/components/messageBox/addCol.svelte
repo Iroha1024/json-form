@@ -6,18 +6,8 @@
         {/each}
     </select>
 </label>
-<Input
-    description="键值"
-    regexp={/^[a-zA-Z]{1,12}$/}
-    advice="输入1-12位字母"
-    bind:value={key}
-    bind:isValidated={validation[0]} />
-<Input
-    description="列名"
-    regexp={/^.{1,12}$/}
-    advice="输入任意1-12位"
-    bind:value={name}
-    bind:isValidated={validation[1]} />
+<Input description="键值" ruleList={ruleList[0]} bind:value={key} bind:isValidated={validation[0]} />
+<Input description="列名" ruleList={ruleList[1]} bind:value={name} bind:isValidated={validation[1]} />
 <label>
     <span>初值：</span>
     <svelte:component
@@ -29,14 +19,24 @@
 </label>
 
 <script>
-    import { message } from '../../store'
     import { getComponent } from '../dataArea/compImport'
 
     import Input from './input.svelte'
 
     export let msgValue
+    export let json
 
-    let isValidated, type, key, name
+    let type, key, name
+
+    const keyList = Object.keys(json[0])
+
+    const ruleList = [
+        [
+            { rule: /^[a-zA-Z]{1,12}$/, advice: '输入1-12位字母' },
+            { rule: keyList, advice: '键值已存在' },
+        ],
+        [{ rule: /^.{1,12}$/, advice: '输入任意1-12位' }],
+    ]
     const validation = new Array(2).fill(false)
 
     const compList = [
@@ -58,14 +58,7 @@
     }
 
     $: {
-        if (validation.every(i => i)) {
-            isValidated = true
-        } else {
-            isValidated = false
-        }
-    }
-
-    $: {
+        let isValidated = validation.every(i => i)
         msgValue = {
             isValidated,
             key,

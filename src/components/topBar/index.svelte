@@ -1,10 +1,12 @@
 <div class="json-form__top-bar">
-    {#each colList as { name }}
-        <div class="json-form__top-bar__col col">{name}</div>
+    {#each colList as { key, name }}
+        <div class="json-form__top-bar__col col" on:click={updateCol(key, name)}>{name}</div>
     {/each}
 </div>
 
 <script>
+    import { message } from '../../store'
+
     export let json
 
     $: colList = Object.entries(json[0]).map(([key, { name, type }]) => ({
@@ -12,4 +14,26 @@
         name,
         type,
     }))
+
+    function updateCol(oldKey, oldName) {
+        message.set({
+            type: 'updateCol',
+            title: '更新列',
+            value: {
+                oldKey,
+                oldName,
+            },
+            fn: () => {
+                json = json.map(row => {
+                    const { key, name } = $message.value
+                    if (key !== oldKey) {
+                        row[key] = row[oldKey]
+                        delete row[oldKey]
+                    }
+                    row[key].name = name
+                    return row
+                })
+            },
+        })
+    }
 </script>

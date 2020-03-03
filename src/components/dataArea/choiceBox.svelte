@@ -1,7 +1,7 @@
 <div class={$$props.class}>
     <div class="choice-box" on:click={click}>
         {#if data[key].value}
-            <div class="check-mark show" out:fade />
+            <div class="check-mark show" out:fade|local />
         {/if}
     </div>
 </div>

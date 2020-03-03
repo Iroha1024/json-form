@@ -1,11 +1,7 @@
 <div class="json-form__side-bar">
-    <div class="iconfont icon-add-row" on:click={addRow} />
-    <div class="iconfont icon-add-col" on:click={addCol} />
-    <div
-        class="iconfont icon-json"
-        on:click={() => {
-            console.log(JSON.stringify(json, null, 2))
-        }} />
+    <div class="icon iconfont icon-add-row" on:click={addRow} />
+    <div class="icon iconfont icon-add-col" on:click={addCol} />
+    <div class="icon iconfont icon-export" on:click={exportJson} />
 </div>
 
 <script>
@@ -35,7 +31,7 @@
     function addCol() {
         message.set({
             type: 'addCol',
-            title: '新增一列',
+            title: '新增列',
             value: null,
             fn: () => {
                 json = json.map(row => {
@@ -49,5 +45,9 @@
                 })
             },
         })
+    }
+
+    function exportJson() {
+        console.log(JSON.stringify(json, null, 2))
     }
 </script>

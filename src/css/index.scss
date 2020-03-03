@@ -1,28 +1,27 @@
+@import './iconfont';
 @import './scrollbar';
 @import './function';
+@import './mixin';
 
-#app {
-    display: flex;
-    justify-content: center;
-}
-
-$border: 1px;
-$border-color: #ccc;
+$border: 1.5px;
+$border-color: #dcdfe6;
+$hover-color: #eff5fe;
 
 .json-form__wrapper {
-    box-shadow: 0px 0px 5px 2px #ccc;
     display: flex;
     font-size: 25px;
+    font-weight: 300;
+    border: $border solid $border-color;
+    user-select: none;
     .json-form__side-bar {
         width: 60px;
         flex: 0 0 auto;
-        border: $border solid $border-color;
-        & > div {
-            padding-top: 10px;
+        border-right: $border solid $border-color;
+        .icon {
+            padding: 5px;
+            text-align: center;
             cursor: pointer;
-            &:hover {
-                background: #ccc;
-            }
+            @include hover($hover-color);
         }
         .icon-add-row {
             font-size: 50px;
@@ -30,19 +29,23 @@ $border-color: #ccc;
         .icon-add-col {
             font-size: 50px;
         }
-        .icon-json {
-            font-size: 20px;
+        .icon-export {
+            font-size: 45px;
         }
     }
     .json-form__main {
         width: inherit;
         overflow: scroll;
+        @include scrollbar;
         .json-form {
             display: table;
             border-collapse: collapse;
             &__top-bar {
                 display: table-header-group;
+                cursor: pointer;
                 &__col {
+                    @include hover($hover-color);
+                    border-top: 0 !important;
                     white-space: nowrap;
                 }
             }
@@ -50,6 +53,10 @@ $border-color: #ccc;
                 display: table-row-group;
                 &__row {
                     display: table-row;
+                    @include hover($hover-color);
+                    div[contenteditable] {
+                        word-break: keep-all;
+                    }
                 }
             }
             .col {
@@ -84,6 +91,7 @@ $border-color: #ccc;
             flex-direction: column;
             header {
                 font-size: 25px;
+                padding-bottom: 10px;
             }
             main {
                 padding: 10px 5px;
@@ -91,15 +99,25 @@ $border-color: #ccc;
                 flex-direction: column;
                 label {
                     display: flex;
+                    align-items: center;
                     padding-bottom: 25px;
                     position: relative;
+                    select {
+                        width: 200px;
+                        padding: 3px 5px;
+                        font-size: inherit;
+                        border: $border solid $border-color;
+                    }
                     input,
                     div[contenteditable] {
-                        height: 25px;
+                        width: 190px;
+                        min-height: 30px;
+                        font-size: 20px;
                         padding: 0 5px;
                         border-radius: 5px;
                         border: $border solid $border-color;
                         cursor: text;
+                        letter-spacing: 1px;
                     }
                     .advice {
                         position: absolute;
@@ -108,14 +126,9 @@ $border-color: #ccc;
                         color: #f74343;
                         left: 70px;
                     }
-                    select {
-                        width: 180px;
-                        padding: 3px 5px;
-                        font-size: inherit;
-                    }
                     .data-component {
-                        width: 180px;
-                        height: 30px !important;
+                        width: 190px;
+                        padding-bottom: 6px;
                     }
                 }
             }
@@ -123,16 +136,22 @@ $border-color: #ccc;
                 display: flex;
                 justify-content: center;
                 .button {
+                    $confirm-color: #409eff;
+                    $cancel-color: #f55c5c;
                     border-radius: 5px;
                     padding: 5px 15px;
                     margin: 0 20px;
-                    color: #fff;
                     cursor: pointer;
                     &--confirm {
-                        background-color: #409eff;
+                        @include button($confirm-color);
                     }
                     &--cancel {
-                        background-color: #f55c5c;
+                        @include button($cancel-color);
+                    }
+                    &.disabled:hover {
+                        color: #fff;
+                        background-color: $cancel-color;
+                        border: $border solid $cancel-color;
                     }
                 }
             }
@@ -140,11 +159,12 @@ $border-color: #ccc;
     }
 }
 
+//choiceBox.svelte
 $deg: 45deg;
 $w: 36px;
 $h: 2 / 3 * $w;
-$border: 1 / 10 * $w;
-$border-color: #24f37d;
+$check-mark-width: 1 / 10 * $w;
+$check-mark-color: #57f19a;
 
 $width: ($w - $h * tan($deg)) / cos($deg);
 $height: $h / cos($deg);
@@ -153,7 +173,7 @@ $height: $h / cos($deg);
     width: $w;
     height: $h;
     margin: 0 auto;
-    border: 2px solid #ccc;
+    border: $border solid $border-color;
     border-radius: 50%;
     cursor: pointer;
     .check-mark {
@@ -161,8 +181,8 @@ $height: $h / cos($deg);
         box-sizing: border-box;
         width: $width;
         height: $height;
-        border-right: $border solid $border-color;
-        border-top: $border solid $border-color;
+        border-right: $check-mark-width solid $check-mark-color;
+        border-top: $check-mark-width solid $check-mark-color;
         transform-origin: top left;
         transform: translate(1 / 12 * $w, $h - $w * tan($deg) + $h * tan($deg) * tan($deg)) scaleY(-1) rotate(-$deg);
     }
@@ -187,6 +207,7 @@ $height: $h / cos($deg);
     }
 }
 
+//colorPicker.svelte
 .pickr {
     display: flex;
     justify-content: center;
