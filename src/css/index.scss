@@ -151,7 +151,7 @@ $hover-color: #eff5fe;
                     &.disabled:hover {
                         color: #fff;
                         background-color: $cancel-color;
-                        border: $border solid $cancel-color;
+                        border: 1px solid $cancel-color;
                     }
                 }
             }
@@ -211,4 +211,7 @@ $height: $h / cos($deg);
 .pickr {
     display: flex;
     justify-content: center;
+}
+.pickr-hide {
+    display: none;
 }

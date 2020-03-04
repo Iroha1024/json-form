@@ -9,10 +9,14 @@
 <script>
     import { fade } from 'svelte/transition'
 
-    export let key
     export let data
+    export let key
+    export let options
+
+    let { editable } = options
 
     function click() {
+        if (!editable) return
         data[key].value = !data[key].value
     }
 </script>

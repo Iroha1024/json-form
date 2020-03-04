@@ -2,12 +2,7 @@
     {#each json as row}
         <div class="json-form__data-area__row">
             {#each Object.keys(row) as key}
-                <svelte:component
-                    this={getComponent(row[key].type)}
-                    class="col"
-                    bind:options
-                    bind:key
-                    bind:data={row} />
+                <svelte:component class="col" this={getComponent(row[key].type)} bind:data={row} bind:key {options} />
             {/each}
         </div>
     {/each}

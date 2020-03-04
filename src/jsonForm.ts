@@ -52,7 +52,7 @@ function isVaildJson(json: unknown): json is VaildJson {
 }
 
 function setDefaultJson(str: string | Partial<Options> | undefined) {
-    const defaultJson: VaildJson = [{ key: { name: '键值', type: 'string', value: '' } }]
+    const defaultJson: VaildJson = [{ key: { name: '键值', type: 'string', value: '属性' } }]
     let json
     if (typeof str === 'string') {
         try {

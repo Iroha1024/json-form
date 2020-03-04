@@ -6,8 +6,11 @@
     import Pickr from '@simonwep/pickr'
     import { onMount } from 'svelte'
 
-    export let key
     export let data
+    export let key
+    export let options
+
+    let { editable } = options
 
     let colorPicker
 
@@ -18,6 +21,8 @@
             theme: 'nano',
 
             default: data[key].value,
+
+            appClass: editable ? '' : 'pickr-hide',
 
             swatches: [
                 'rgba(244, 67, 54, 1)',

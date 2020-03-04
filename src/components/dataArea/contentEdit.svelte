@@ -5,9 +5,9 @@
 {/if}
 
 <script>
-    export let options
-    export let key
     export let data
+    export let key
+    export let options
 
     let { editable } = options
 </script>

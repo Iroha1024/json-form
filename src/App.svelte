@@ -4,7 +4,7 @@
     {/if}
     <div class="json-form__main">
         <div class="json-form">
-            <TopBar bind:json />
+            <TopBar bind:json {options} />
             <DataArea bind:json bind:options />
         </div>
     </div>
