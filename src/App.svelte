@@ -1,5 +1,5 @@
-<div class="json-form__wrapper" style="width: {width}px; height: {height}px">
-    {#if editable}
+<div class="json-form__wrapper" style="width: {options.width}px; height: {options.height}px">
+    {#if options.editable}
         <SideBar bind:json />
     {/if}
     <div class="json-form__main">
@@ -11,7 +11,12 @@
     <MessageBox {json} />
 </div>
 
+<svelte:options accessors/>
+
 <script>
+    import '@simonwep/pickr/dist/themes/nano.min.css'
+    import './css/index.scss'
+
     import TopBar from './components/topBar/index.svelte'
     import SideBar from './components/sideBar/index.svelte'
     import DataArea from './components/dataArea/index.svelte'
@@ -19,6 +24,4 @@
 
     export let json
     export let options
-
-    let { width, height, editable } = options
 </script>

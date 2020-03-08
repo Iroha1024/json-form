@@ -5,11 +5,12 @@
     "module": "esnext",
     "allowJs": true,
     "lib": ["esnext", "dom"],
+    "declaration": true,
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
   },
   "include": [
-    "src/**/*"
+    "src/*.ts"
   ]
 }

@@ -10,19 +10,15 @@
     export let key
     export let options
 
-    let { editable } = options
-
-    let colorPicker
+    let colorPicker, pickr
 
     onMount(() => {
-        const pickr = Pickr.create({
+        pickr = Pickr.create({
             el: colorPicker,
 
             theme: 'nano',
 
             default: data[key].value,
-
-            appClass: editable ? '' : 'pickr-hide',
 
             swatches: [
                 'rgba(244, 67, 54, 1)',
@@ -76,4 +72,7 @@
                 pickr.setColor(nullColor)
             })
     })
+    $: if(!options.editable) {
+        pickr && pickr.destroy()
+    }
 </script>

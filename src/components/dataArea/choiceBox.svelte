@@ -13,10 +13,8 @@
     export let key
     export let options
 
-    let { editable } = options
-
     function click() {
-        if (!editable) return
+        if (!options.editable) return
         data[key].value = !data[key].value
     }
 </script>

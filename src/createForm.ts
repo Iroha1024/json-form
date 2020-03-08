@@ -25,17 +25,24 @@ export interface Options {
     height: number
 }
 
-export function jsonForm(container: Element | string, options?: Partial<Options>): void
-export function jsonForm(container: Element | string, str?: string): void
-export function jsonForm(container: Element | string, str: string, options: Partial<Options>): void
-export function jsonForm(container: Element | string, param?: string | Partial<Options>, param2?: Partial<Options>) {
+interface JsonForm {
+    setJson: (json: VaildJson) => any
+    getJson: () => VaildJson
+    setOptions: (options: Options) => any
+    getOptions: () => Options
+}
+
+export function createForm(container: Element | string, options?: Partial<Options>): JsonForm
+export function createForm(container: Element | string, str?: string): JsonForm
+export function createForm(container: Element | string, str: string, options: Partial<Options>): JsonForm
+export function createForm(container: Element | string, param?: string | Partial<Options>, param2?: Partial<Options>) {
     const json = setDefaultJson(param)
     const options = setDefaultOptions(param, param2)
     if (typeof container === 'string') {
         const element = document.querySelector(container)
-        element && render(element, json, options)
+        return element && render(element, json, options)
     } else {
-        render(container, json, options)
+        return render(container, json, options)
     }
 }
 

@@ -4,7 +4,7 @@
   "description": "转换json与form，可编辑json的svelte ui组件",
   "main": "dist/json-form.js",
   "module": "dist/json-form.esm.js",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "index.d.ts"
