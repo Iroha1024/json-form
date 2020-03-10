@@ -9,19 +9,14 @@
 
     export let json
     export let options
-
-    let colList
-
-    $: if (json.length > 0) {
-        colList = Object.entries(json[0]).map(([key, { name, type }]) => ({
-            key,
-            name,
-            type,
-        }))
-    }
+    export let colList
 
     function updateCol(oldKey, oldName) {
         if (!options.editable) return
+        if (json.length < 1) {
+            //
+            return
+        }
         message.set({
             type: 'updateCol',
             title: '更新列',

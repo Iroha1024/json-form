@@ -1,10 +1,10 @@
 <div class="json-form__wrapper" {style} on:contextmenu|preventDefault={resetCondition}>
     {#if options.editable}
-        <SideBar bind:json />
+        <SideBar bind:json {colList} />
     {/if}
     <div class="json-form__main">
         <div class="json-form">
-            <TopBar bind:json {options} />
+            <TopBar bind:json {options} {colList} />
             <DataArea bind:json bind:options />
         </div>
     </div>
@@ -26,6 +26,16 @@
 
     export let json
     export let options
+
+    let colList
+    //数据清空时，仍保存列信息
+    $: if (json.length > 0) {
+        colList = Object.entries(json[0]).map(([key, { name, type }]) => ({
+            key,
+            name,
+            type,
+        }))
+    }
 
     $: style = Object.entries({
         width: options.width + 'px',

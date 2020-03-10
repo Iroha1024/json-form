@@ -47,6 +47,5 @@
                 return row
             })
         }
-        condition.reset()
     }
 </script>

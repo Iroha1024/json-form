@@ -6,6 +6,8 @@
     import Pickr from '@simonwep/pickr'
     import { onMount } from 'svelte'
 
+    import { condition } from '../../store/condition'
+
     export let data
     export let key
     export let options
@@ -72,7 +74,7 @@
                 pickr.setColor(nullColor)
             })
     })
-    $: if (!options.editable) {
+    $: if (!options.editable || $condition) {
         pickr && pickr.destroy()
     }
 </script>

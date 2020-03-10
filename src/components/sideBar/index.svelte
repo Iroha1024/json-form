@@ -11,11 +11,19 @@
     import { condition } from '../../store/condition'
 
     export let json
+    export let colList
 
     function addRow() {
-        const data = JSON.parse(JSON.stringify(json[0]))
-        Object.keys(data).forEach(key => {
-            const type = data[key].type
+        if (colList.length < 1) {
+            //
+            return
+        }
+        let data = {}
+        colList.forEach(({ key, name, type }) => {
+            data[key] = {
+                name,
+                type,
+            }
             switch (type) {
                 case 'string':
                     data[key].value = ''
@@ -32,6 +40,10 @@
     }
 
     function addCol() {
+        if (json.length < 1) {
+            //
+            return
+        }
         message.set({
             type: 'addCol',
             title: '新增列',

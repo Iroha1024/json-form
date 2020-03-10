@@ -89,10 +89,6 @@ function setDefaultOptions(param: string | Partial<Options> | undefined, param2:
     if (param2 !== undefined) {
         options = param2
     }
-    for (const key in defaultOptions) {
-        if (!options.hasOwnProperty(key)) {
-            ;(options as any)[key] = defaultOptions[key as keyof Options]
-        }
-    }
+    options = Object.assign(defaultOptions, options)
     return options as Options
 }
