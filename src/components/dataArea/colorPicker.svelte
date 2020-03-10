@@ -1,4 +1,4 @@
-<div class={$$props.class}>
+<div class={$$props.class} on:mousemove on:click>
     <div bind:this={colorPicker} />
 </div>
 
@@ -72,7 +72,7 @@
                 pickr.setColor(nullColor)
             })
     })
-    $: if(!options.editable) {
+    $: if (!options.editable) {
         pickr && pickr.destroy()
     }
 </script>

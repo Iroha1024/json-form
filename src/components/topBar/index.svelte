@@ -5,16 +5,20 @@
 </div>
 
 <script>
-    import { message } from '../../store'
+    import { message } from '../../store/message'
 
     export let json
     export let options
 
-    $: colList = Object.entries(json[0]).map(([key, { name, type }]) => ({
-        key,
-        name,
-        type,
-    }))
+    let colList
+
+    $: if (json.length > 0) {
+        colList = Object.entries(json[0]).map(([key, { name, type }]) => ({
+            key,
+            name,
+            type,
+        }))
+    }
 
     function updateCol(oldKey, oldName) {
         if (!options.editable) return

@@ -1,11 +1,14 @@
 <div class="json-form__side-bar">
     <div class="icon iconfont icon-add-row" on:click={addRow} />
     <div class="icon iconfont icon-add-col" on:click={addCol} />
+    <div class="icon iconfont icon-remove-row" on:click={removeRow} />
+    <div class="icon iconfont icon-remove-col" on:click={removeCol} />
     <div class="icon iconfont icon-export" on:click={exportJson} />
 </div>
 
 <script>
-    import { message } from '../../store'
+    import { message } from '../../store/message'
+    import { condition } from '../../store/condition'
 
     export let json
 
@@ -45,6 +48,22 @@
                 })
             },
         })
+    }
+
+    function removeRow() {
+        if ($condition === 'remove-row') {
+            condition.reset()
+        } else {
+            condition.set('remove-row')
+        }
+    }
+
+    function removeCol() {
+        if ($condition === 'remove-col') {
+            condition.reset()
+        } else {
+            condition.set('remove-col')
+        }
     }
 
     function exportJson() {

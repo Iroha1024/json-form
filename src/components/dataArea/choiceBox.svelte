@@ -1,4 +1,4 @@
-<div class={$$props.class}>
+<div class={$$props.class} on:mousemove on:click>
     <div class="choice-box" on:click={click}>
         {#if data[key].value}
             <div class="check-mark show" out:fade|local />

@@ -1,5 +1,10 @@
 {#if options.editable}
-    <div class={$$props.class} contenteditable="plaintext-only" bind:innerHTML={data[key].value} />
+    <div
+        class={$$props.class}
+        contenteditable="plaintext-only"
+        bind:innerHTML={data[key].value}
+        on:mousemove
+        on:click />
 {:else}
     <div class={$$props.class} contenteditable="false" bind:innerHTML={data[key].value} />
 {/if}

@@ -2,7 +2,7 @@
 <Input description="列名" ruleList={ruleList[1]} bind:value={name} bind:isValidated={validation[1]} />
 
 <script>
-    import { message } from '../../store'
+    import { message } from '../../store/message'
 
     import Input from './input.svelte'
 

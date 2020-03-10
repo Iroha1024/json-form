@@ -12,3 +12,8 @@
         background-color: $color;
     }
 }
+
+@mixin remove($color) {
+    background-color: $color;
+    border-color: $color;
+}

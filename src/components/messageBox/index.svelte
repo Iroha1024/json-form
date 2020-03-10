@@ -20,7 +20,7 @@
 {/if}
 
 <script>
-    import { message } from '../../store'
+    import { message } from '../../store/message'
 
     import AddCol from './addCol.svelte'
     import UpdateCol from './updateCol.svelte'

@@ -6,6 +6,7 @@
 $border: 1.5px;
 $border-color: #dcdfe6;
 $hover-color: #eff5fe;
+$remove-color: #fd9b9b;
 
 .json-form__wrapper {
     display: flex;
@@ -28,6 +29,12 @@ $hover-color: #eff5fe;
         }
         .icon-add-col {
             font-size: 50px;
+        }
+        .icon-remove-row {
+            font-size: 45px;
+        }
+        .icon-remove-col {
+            font-size: 45px;
         }
         .icon-export {
             font-size: 45px;
@@ -53,10 +60,12 @@ $hover-color: #eff5fe;
                 display: table-row-group;
                 &__row {
                     display: table-row;
-                    @include hover($hover-color);
                     div[contenteditable] {
                         word-break: keep-all;
                     }
+                }
+                .row--hover {
+                    @include hover($hover-color);
                 }
             }
             .col {
@@ -69,6 +78,11 @@ $hover-color: #eff5fe;
                 &:first-child {
                     border-left: 0;
                 }
+            }
+            .row--remove,
+            .col--remove {
+                cursor: grab;
+                @include remove($remove-color);
             }
         }
     }
