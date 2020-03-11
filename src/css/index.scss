@@ -171,6 +171,27 @@ $remove-color: #fd9b9b;
             }
         }
     }
+    .notification__wrapper {
+        transform: translateZ(0);
+        .notification {
+            width: 320px;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            border: 1px solid $border-color;
+            background-color: #fff;
+            box-shadow: 0 0 10px #eeebeb;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            color: #f51d1d;
+            font-weight: 500;
+            &__content {
+                font-size: 20px;
+                overflow-wrap: break-word;
+            }
+        }
+    }
 }
 
 //choiceBox.svelte

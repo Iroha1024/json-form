@@ -6,6 +6,7 @@
 
 <script>
     import { message } from '../../store/message'
+    import { notification } from '../../store/notification'
 
     export let json
     export let options
@@ -14,7 +15,7 @@
     function updateCol(oldKey, oldName) {
         if (!options.editable) return
         if (json.length < 1) {
-            //
+            notification.set('无法更新，请先添加行数据！')
             return
         }
         message.set({

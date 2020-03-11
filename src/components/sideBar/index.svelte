@@ -9,13 +9,14 @@
 <script>
     import { message } from '../../store/message'
     import { condition } from '../../store/condition'
+    import { notification } from '../../store/notification'
 
     export let json
     export let colList
 
     function addRow() {
         if (colList.length < 1) {
-            //
+            notification.set('请先添加列信息！')
             return
         }
         let data = {}
@@ -41,7 +42,7 @@
 
     function addCol() {
         if (json.length < 1) {
-            //
+            notification.set('请先添加行数据！')
             return
         }
         message.set({

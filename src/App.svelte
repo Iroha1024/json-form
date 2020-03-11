@@ -9,6 +9,7 @@
         </div>
     </div>
     <MessageBox {json} />
+    <Notification />
 </div>
 
 <svelte:options accessors />
@@ -23,6 +24,7 @@
     import SideBar from './components/sideBar/index.svelte'
     import DataArea from './components/dataArea/index.svelte'
     import MessageBox from './components/messageBox/index.svelte'
+    import Notification from './components/notification/index.svelte'
 
     export let json
     export let options
