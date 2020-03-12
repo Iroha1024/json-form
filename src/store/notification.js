@@ -12,7 +12,7 @@ function createNotification() {
             set(value)
             timer = setTimeout(() => {
                 set(null)
-            }, 3000);
+            }, 3000)
         },
     }
 }

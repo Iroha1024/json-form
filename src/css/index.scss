@@ -5,7 +5,7 @@
 
 $border: 1.5px;
 $border-color: #dcdfe6;
-$hover-color: #eff5fe;
+$hover-color: #e3edfc;
 $remove-color: #fd9b9b;
 
 .json-form__wrapper {
@@ -63,6 +63,14 @@ $remove-color: #fd9b9b;
                     div[contenteditable] {
                         word-break: keep-all;
                     }
+                    .row--remove,
+                    .col--remove {
+                        cursor: grab;
+                        @include remove($remove-color);
+                    }
+                    &:nth-child(2n + 1).bg-stripe {
+                        background-color: #f3faff;
+                    }
                 }
                 .row--hover {
                     @include hover($hover-color);
@@ -72,17 +80,12 @@ $remove-color: #fd9b9b;
                 display: table-cell;
                 border: $border solid $border-color;
                 max-width: 250px;
-                padding: 10px 8px;
                 vertical-align: middle;
                 overflow-wrap: break-word;
+                @include padding;
                 &:first-child {
                     border-left: 0;
                 }
-            }
-            .row--remove,
-            .col--remove {
-                cursor: grab;
-                @include remove($remove-color);
             }
         }
     }

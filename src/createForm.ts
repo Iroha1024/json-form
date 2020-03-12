@@ -22,7 +22,8 @@ export type VaildJson = Row[]
 export interface Options {
     editable: boolean
     width: number
-    height: number
+    height: number | 'auto'
+    background: 'none' | 'stripe'
 }
 
 interface JsonForm {
@@ -81,6 +82,7 @@ function setDefaultOptions(param: string | Partial<Options> | undefined, param2:
         editable: true,
         width: 800,
         height: 600,
+        background: 'none',
     }
     let options = {}
     if (typeof param !== 'string' && param !== undefined) {

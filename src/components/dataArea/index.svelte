@@ -1,20 +1,18 @@
 <div class="json-form__data-area">
     {#each json as row, x (row)}
-        <div class="json-form__data-area__row" class:row--hover={!$condition}>
-            {#each Object.keys(row) as key, y}
+        <div
+            class="json-form__data-area__row"
+            class:row--hover={!$condition}
+            class:bg-stripe={options.background === 'stripe'}>
+            {#each Object.keys(row) as key, y (row[key])}
                 <svelte:component
                     this={getComponent(row[key].type)}
-                    class="col {$condition === 'remove-row' && $coordinate.x === x ? 'row--remove' : ''}
-                    {$condition === 'remove-col' && $coordinate.y === y ? 'col--remove' : ''}"
                     bind:data={row}
                     bind:key
                     {options}
-                    on:mousemove={() => {
-                        updateCoordinate(x, y)
-                    }}
-                    on:click={() => {
-                        remove(x, key)
-                    }} />
+                    class="col {$condition === 'remove-row' && $coordinate.x === x ? 'row--remove' : ''} {$condition === 'remove-col' && $coordinate.y === y ? 'col--remove' : ''}"
+                    on:mousemove={updateCoordinate(x, y)}
+                    on:click={remove(x, key)} />
             {/each}
         </div>
     {/each}
@@ -30,7 +28,7 @@
     export let options
 
     function updateCoordinate(x, y) {
-        if (($condition && x !== $coordinate.x) || y !== $coordinate.y) {
+        if ($condition && (x !== $coordinate.x || y !== $coordinate.y)) {
             coordinate.set({
                 x,
                 y,

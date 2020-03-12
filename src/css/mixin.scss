@@ -9,11 +9,15 @@
 
 @mixin hover($color) {
     &:hover {
-        background-color: $color;
+        background-color: $color !important;
     }
 }
 
 @mixin remove($color) {
-    background-color: $color;
-    border-color: $color;
+    background-color: $color !important;
+    border-color: $color !important;
+}
+
+@mixin padding {
+    padding: 10px 8px;
 }

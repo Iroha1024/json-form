@@ -20,26 +20,32 @@ yarn add @iroha1024/json-form
 ## Usage
 
 ```javascript
-import { createForm } from "@iroha1024/json-form"
+import { createForm, VaildJson } from "@iroha1024/json-form"
 
 const jsonForm = createForm('#app') // or createForm(document.body)
 
-//默认值，可覆盖单个属性
-const defaultOptions = {
-    editable: true,	
-    width: 800,	//overridable
-    height: 600,
-}
+createForm('#app', options)
 
-createForm('#app', { editable: false })
+const json: VaildJson = [{ key: { name: "键值", type: "string", value: "属性" } }]
+const str = JSON.stringify(json)
 
-//默认值，需保持合法json字符串格式（type VaildJson）
-const defaultStr = '[{ "key": { "name": "键值", "type": "string", "value": "属性" } }]'
+createForm('#app', str)
 
-createForm('#app', defaultStr)
-
-createForm('#app', defaultStr, { editable: false })
+createForm('#app', str, options)
 ```
+
+## Options
+
+```javascript
+const options = {
+    editable: true,	
+    width: 800,		//number
+    height: 600,	//number or 'auto'
+    background: 'none'	// 'none' or 'stripe'
+}
+```
+
+
 
 ## Instance method
 
