@@ -1,6 +1,6 @@
 {
   "name": "@iroha1024/json-form",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "转换json与form，可编辑json的svelte ui组件",
   "main": "dist/json-form.js",
   "module": "dist/json-form.esm.js",
@@ -11,7 +11,8 @@
   "author": "iroha1024",
   "license": "MIT",
   "keywords": [
-    "svelte"
+    "svelte",
+    "json"
   ],
   "homepage": "https://github.com/Iroha1024/json-form#readme",
   "repository": {
