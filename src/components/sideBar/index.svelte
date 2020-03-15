@@ -15,6 +15,7 @@
     export let colList
 
     function addRow() {
+        condition.reset()
         if (colList.length < 1) {
             notification.set('请先添加列信息！')
             return
@@ -41,6 +42,7 @@
     }
 
     function addCol() {
+        condition.reset()
         if (json.length < 1) {
             notification.set('请先添加行数据！')
             return
@@ -80,6 +82,7 @@
     }
 
     function exportJson() {
+        condition.reset()
         console.log(JSON.stringify(json, null, 2))
     }
 </script>

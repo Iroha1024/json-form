@@ -10,7 +10,7 @@
                     bind:data={row}
                     bind:key
                     {options}
-                    class="col {$condition === 'remove-row' && $coordinate.x === x ? 'row--remove' : ''} {$condition === 'remove-col' && $coordinate.y === y ? 'col--remove' : ''}"
+                    class={`col ${$condition === 'remove-row' && $coordinate.x === x ? 'row--remove' : ''}  ${$condition === 'remove-col' && $coordinate.y === y ? 'col--remove' : ''}`.trim()}
                     on:mousemove={updateCoordinate(x, y)}
                     on:click={remove(x, key)} />
             {/each}

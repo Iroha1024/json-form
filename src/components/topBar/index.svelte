@@ -6,6 +6,7 @@
 
 <script>
     import { message } from '../../store/message'
+    import { condition } from '../../store/condition'
     import { notification } from '../../store/notification'
 
     export let json
@@ -13,6 +14,7 @@
     export let colList
 
     function updateCol(oldKey, oldName) {
+        condition.reset()
         if (!options.editable) return
         if (json.length < 1) {
             notification.set('无法更新，请先添加行数据！')
