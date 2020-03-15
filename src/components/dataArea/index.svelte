@@ -3,7 +3,7 @@
         <div
             class="json-form__data-area__row"
             class:row--hover={!$condition}
-            class:bg-stripe={options.background === 'stripe'}>
+            class:bg-stripe={options.style.background === 'stripe'}>
             {#each Object.keys(row) as key, y (row[key])}
                 <svelte:component
                     this={getComponent(row[key].type)}

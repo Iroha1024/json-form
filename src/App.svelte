@@ -1,4 +1,4 @@
-<div class="json-form__wrapper" {style} on:contextmenu|preventDefault={resetCondition}>
+<div class="json-form__wrapper" bind:this={wrapper} on:contextmenu|preventDefault={resetCondition}>
     {#if options.editable}
         <SideBar bind:json {colList} />
     {/if}
@@ -18,6 +18,8 @@
     import '@simonwep/pickr/dist/themes/nano.min.css'
     import './css/index.scss'
 
+    import { onMount } from 'svelte'
+
     import { condition } from './store/condition'
 
     import TopBar from './components/topBar/index.svelte'
@@ -29,7 +31,13 @@
     export let json
     export let options
 
+    let wrapper
     let colList
+
+    onMount(() => {
+        setStyle()
+    })
+
     //数据清空时，仍保存列信息
     $: if (json.length > 0) {
         colList = Object.entries(json[0]).map(([key, { name, type }]) => ({
@@ -39,12 +47,20 @@
         }))
     }
 
-    $: style = Object.entries({
-        width: options.width + 'px',
-        height: typeof options.height === 'number' ? options.height + 'px' : options.height,
-    })
-        .map(([key, value]) => `${key}: ${value};`)
-        .join('')
+    $: if (wrapper && options.style) {
+        setStyle()
+    }
+
+    function setStyle() {
+        const { width, height, fontSize, lineHeight, padding, background } = options.style
+        const set = (key, value) => wrapper.style.setProperty(key, value)
+        set('--width', width + 'px')
+        set('--height', typeof height === 'number' ? height + 'px' : height)
+        set('--font-size', fontSize + 'px')
+        set('--line-height', lineHeight)
+        set('--padding-top', padding.top + 'px')
+        set('--padding-right', padding.right + 'px')
+    }
 
     function resetCondition() {
         condition.reset()

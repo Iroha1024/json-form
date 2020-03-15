@@ -1,3 +1,4 @@
+import { tick } from 'svelte'
 import { writable } from 'svelte/store'
 
 function createNotification() {
@@ -7,8 +8,10 @@ function createNotification() {
 
     return {
         subscribe,
-        set: value => {
+        set: async value => {
             clearTimeout(timer)
+            set(null)
+            await tick()
             set(value)
             timer = setTimeout(() => {
                 set(null)

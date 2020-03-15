@@ -38,10 +38,18 @@ createForm('#app', str, options)
 
 ```javascript
 const options = {
-    editable: true,	
-    width: 800,		//number
-    height: 600,	//number or 'auto'
-    background: 'none'	// 'none' or 'stripe'
+    editable: true,
+    style: {
+        width: 800,
+        height: 600,	// or 'auto'
+        fontSize: 25,
+        lineHeight: 1.6,
+        padding: {	//单元格间距
+            top: 10,
+            right: 8,
+        },
+        background: 'none',	// or 'stripe'
+    },
 }
 ```
 
@@ -51,10 +59,10 @@ const options = {
 
 通过实例方法可访问和修改jsonForm相关数据
 
-| method       | description            | argument    |
-| ------------ | ---------------------- | ----------- |
-| `setJson`    | 修改表格展示的json数据 | `VaildJson` |
-| `getJson`    | 获取json数据           |             |
-| `setOptions` | 修改设置               | `Options`   |
-| `getOptions` | 获取设置               |             |
+| method       | description            | argument               |
+| ------------ | ---------------------- | ---------------------- |
+| `setJson`    | 修改表格展示的json数据 | `VaildJson`            |
+| `getJson`    | 获取json数据           |                        |
+| `setOptions` | 修改设置               | `DeepPartial<Options>` |
+| `getOptions` | 获取设置               |                        |
 

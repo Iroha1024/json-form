@@ -7,15 +7,24 @@ $border: 1.5px;
 $border-color: #dcdfe6;
 $hover-color: #e3edfc;
 $remove-color: #fd9b9b;
+$padding-top: var(--padding-top);
+$padding-right: var(--padding-right);
+$line-height: var(--line-height);
+$font-size: var(--font-size);
 
 .json-form__wrapper {
     display: flex;
-    font-size: 25px;
+    font-size: $font-size;
+    line-height: $line-height;
+    width: var(--width);
+    height: var(--height);
     font-weight: 300;
     border: $border solid $border-color;
+    box-sizing: border-box;
     user-select: none;
     .json-form__side-bar {
         width: 60px;
+        line-height: 1.2;
         flex: 0 0 auto;
         border-right: $border solid $border-color;
         .icon {
@@ -63,6 +72,9 @@ $remove-color: #fd9b9b;
                     div[contenteditable] {
                         word-break: keep-all;
                     }
+                    div[contenteditable='false']:empty {
+                        padding-bottom: calc(#{$line-height} * #{$font-size} + #{$padding-top});
+                    }
                     .row--remove,
                     .col--remove {
                         cursor: grab;
@@ -82,7 +94,7 @@ $remove-color: #fd9b9b;
                 max-width: 250px;
                 vertical-align: middle;
                 overflow-wrap: break-word;
-                @include padding;
+                padding: $padding-top $padding-right;
                 &:first-child {
                     border-left: 0;
                 }
