@@ -1,0 +1,14 @@
+{
+  "name": "json-form",
+  "homepage": "https://github.com/Iroha1024/json-form#readme",
+  "scripts": {
+    "build": "rollup -wc"
+  },
+  "dependencies": {
+    "@iroha1024/json-form": "^0.1.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rollup": "^2.0.6"
+  }
+}

@@ -1,0 +1,21 @@
+#app {
+    display: inline-block;
+    margin-left: 20px;
+}
+#switch {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+    top: 50px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #3dcef2;
+    color: #3dcef2;
+}
+#switch:hover {
+    background-color: #3dcef2;
+    color: #fff;
+}
