@@ -74,7 +74,10 @@
                 pickr.setColor(nullColor)
             })
     })
-    $: if (!options.editable || $condition) {
-        pickr && pickr.destroy()
+
+    $: if (options.editable && !$condition) {
+        pickr && pickr.enable()
+    } else {
+        pickr && pickr.disable()
     }
 </script>
