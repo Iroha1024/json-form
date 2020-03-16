@@ -72,9 +72,21 @@ const json = [
 ]
 const jsonForm = createForm('#app', JSON.stringify(json), { style: { background: 'stripe' } })
 
-const btn = document.getElementById('switch')
-btn.addEventListener('click', () => {
-    let condition = jsonForm.getOptions().editable
-    jsonForm.setOptions({ editable: !condition })
-    console.log(jsonForm.getOptions());
+const btn1 = document.getElementById('editable')
+btn1.addEventListener('click', () => {
+    let editable = jsonForm.getOptions().editable
+    jsonForm.setOptions({ editable: !editable })
+})
+
+const btn2 = document.getElementById('background')
+btn2.addEventListener('click', () => {
+    let background = jsonForm.getOptions().style.background
+    jsonForm.setOptions({ style: { background: background === 'stripe' ? 'none' : 'stripe' } })
+})
+
+const btn3 = document.getElementById('json')
+btn3.addEventListener('click', () => {
+    let json = jsonForm.getJson()
+    console.log(json);
+    console.log(JSON.stringify(json, null, 2));
 })

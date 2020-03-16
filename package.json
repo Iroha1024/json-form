@@ -5,7 +5,7 @@
     "build": "rollup -wc"
   },
   "dependencies": {
-    "@iroha1024/json-form": "^0.1.5"
+    "@iroha1024/json-form": "^0.1.6"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^7.1.1",

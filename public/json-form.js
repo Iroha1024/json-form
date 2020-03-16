@@ -706,7 +706,7 @@
 	var css = "/*! Pickr 1.5.1 MIT | https://github.com/Simonwep/pickr */.pickr{position:relative;overflow:visible;transform:translateY(0)}.pickr *{box-sizing:border-box;outline:none;border:none;-webkit-appearance:none}.pickr .pcr-button{position:relative;height:2em;width:2em;padding:.5em;cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;border-radius:.15em;background:url('data:image/svg+xml;utf8, <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 50 50\" stroke=\"%2342445A\" stroke-width=\"5px\" stroke-linecap=\"round\"><path d=\"M45,45L5,5\"></path><path d=\"M45,5L5,45\"></path></svg>') no-repeat 50%;background-size:0;transition:all .3s}.pickr .pcr-button:before{background:url('data:image/svg+xml;utf8, <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 2 2\"><path fill=\"white\" d=\"M1,0H2V1H1V0ZM0,1H1V2H0V1Z\"/><path fill=\"gray\" d=\"M0,0H1V1H0V0ZM1,1H2V2H1V1Z\"/></svg>');background-size:.5em;z-index:-1;z-index:auto}.pickr .pcr-button:after,.pickr .pcr-button:before{position:absolute;content:\"\";top:0;left:0;width:100%;height:100%;border-radius:.15em}.pickr .pcr-button:after{transition:background .3s;background:currentColor}.pickr .pcr-button.clear{background-size:70%}.pickr .pcr-button.clear:before{opacity:0}.pickr .pcr-button.clear:focus{box-shadow:0 0 0 1px hsla(0,0%,100%,.85),0 0 0 3px currentColor}.pickr .pcr-button.disabled{cursor:not-allowed}.pcr-app *,.pickr *{box-sizing:border-box;outline:none;border:none;-webkit-appearance:none}.pcr-app button.pcr-active,.pcr-app button:focus,.pcr-app input.pcr-active,.pcr-app input:focus,.pickr button.pcr-active,.pickr button:focus,.pickr input.pcr-active,.pickr input:focus{box-shadow:0 0 0 1px hsla(0,0%,100%,.85),0 0 0 3px currentColor}.pcr-app .pcr-palette,.pcr-app .pcr-slider,.pickr .pcr-palette,.pickr .pcr-slider{transition:box-shadow .3s}.pcr-app .pcr-palette:focus,.pcr-app .pcr-slider:focus,.pickr .pcr-palette:focus,.pickr .pcr-slider:focus{box-shadow:0 0 0 1px hsla(0,0%,100%,.85),0 0 0 3px rgba(0,0,0,.25)}.pcr-app{position:fixed;display:flex;flex-direction:column;z-index:10000;border-radius:.1em;background:#fff;opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;box-shadow:0 .15em 1.5em 0 rgba(0,0,0,.1),0 0 1em 0 rgba(0,0,0,.03);left:0;top:0}.pcr-app.visible{transition:opacity .3s;visibility:visible;opacity:1}.pcr-app .pcr-swatches{display:flex;flex-wrap:wrap;margin-top:.75em}.pcr-app .pcr-swatches.pcr-last{margin:0}@supports (display:grid){.pcr-app .pcr-swatches{display:grid;align-items:center;grid-template-columns:repeat(auto-fit,1.75em)}}.pcr-app .pcr-swatches>button{font-size:1em;position:relative;width:calc(1.75em - 5px);height:calc(1.75em - 5px);border-radius:.15em;cursor:pointer;margin:2.5px;flex-shrink:0;justify-self:center;transition:all .15s;overflow:hidden;background:transparent;z-index:1}.pcr-app .pcr-swatches>button:before{position:absolute;content:\"\";top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml;utf8, <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 2 2\"><path fill=\"white\" d=\"M1,0H2V1H1V0ZM0,1H1V2H0V1Z\"/><path fill=\"gray\" d=\"M0,0H1V1H0V0ZM1,1H2V2H1V1Z\"/></svg>');background-size:6px;border-radius:.15em;z-index:-1}.pcr-app .pcr-swatches>button:after{content:\"\";position:absolute;top:0;left:0;width:100%;height:100%;background:currentColor;border:1px solid rgba(0,0,0,.05);border-radius:.15em;box-sizing:border-box}.pcr-app .pcr-swatches>button:hover{-webkit-filter:brightness(1.05);filter:brightness(1.05)}.pcr-app .pcr-interaction{display:flex;flex-wrap:wrap;align-items:center;margin:0 -.2em}.pcr-app .pcr-interaction>*{margin:0 .2em}.pcr-app .pcr-interaction input{letter-spacing:.07em;font-size:.75em;text-align:center;cursor:pointer;color:#75797e;background:#f1f3f4;border-radius:.15em;transition:all .15s;padding:.45em .5em;margin-top:.75em}.pcr-app .pcr-interaction input:hover{-webkit-filter:brightness(.975);filter:brightness(.975)}.pcr-app .pcr-interaction input:focus{box-shadow:0 0 0 1px hsla(0,0%,100%,.85),0 0 0 3px rgba(66,133,244,.75)}.pcr-app .pcr-interaction .pcr-result{color:#75797e;text-align:left;flex:1 1 8em;min-width:8em;transition:all .2s;border-radius:.15em;background:#f1f3f4;cursor:text}.pcr-app .pcr-interaction .pcr-result::-moz-selection{background:#4285f4;color:#fff}.pcr-app .pcr-interaction .pcr-result::selection{background:#4285f4;color:#fff}.pcr-app .pcr-interaction .pcr-type.active{color:#fff;background:#4285f4}.pcr-app .pcr-interaction .pcr-cancel,.pcr-app .pcr-interaction .pcr-clear,.pcr-app .pcr-interaction .pcr-save{width:auto;color:#fff}.pcr-app .pcr-interaction .pcr-cancel:hover,.pcr-app .pcr-interaction .pcr-clear:hover,.pcr-app .pcr-interaction .pcr-save:hover{-webkit-filter:brightness(.925);filter:brightness(.925)}.pcr-app .pcr-interaction .pcr-save{background:#4285f4}.pcr-app .pcr-interaction .pcr-cancel,.pcr-app .pcr-interaction .pcr-clear{background:#f44250}.pcr-app .pcr-interaction .pcr-cancel:focus,.pcr-app .pcr-interaction .pcr-clear:focus{box-shadow:0 0 0 1px hsla(0,0%,100%,.85),0 0 0 3px rgba(244,66,80,.75)}.pcr-app .pcr-selection .pcr-picker{position:absolute;height:18px;width:18px;border:2px solid #fff;border-radius:100%;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.pcr-app .pcr-selection .pcr-color-chooser,.pcr-app .pcr-selection .pcr-color-opacity,.pcr-app .pcr-selection .pcr-color-palette{position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:flex;flex-direction:column;cursor:grab;cursor:-webkit-grab}.pcr-app .pcr-selection .pcr-color-chooser:active,.pcr-app .pcr-selection .pcr-color-opacity:active,.pcr-app .pcr-selection .pcr-color-palette:active{cursor:grabbing;cursor:-webkit-grabbing}.pcr-app[data-theme=nano]{width:14.25em;max-width:95vw}.pcr-app[data-theme=nano] .pcr-swatches{margin-top:.6em;padding:0 .6em}.pcr-app[data-theme=nano] .pcr-interaction{padding:0 .6em .6em}.pcr-app[data-theme=nano] .pcr-selection{display:grid;grid-gap:.6em;grid-template-columns:1fr 4fr;grid-template-rows:5fr auto auto;align-items:center;height:10.5em;width:100%;align-self:flex-start}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-preview{grid-area:2/1/4/1;height:100%;width:100%;display:flex;flex-direction:row;justify-content:center;margin-left:.6em}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-preview .pcr-last-color{display:none}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-preview .pcr-current-color{position:relative;background:currentColor;width:2em;height:2em;border-radius:50em;overflow:hidden}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-preview .pcr-current-color:before{position:absolute;content:\"\";top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml;utf8, <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 2 2\"><path fill=\"white\" d=\"M1,0H2V1H1V0ZM0,1H1V2H0V1Z\"/><path fill=\"gray\" d=\"M0,0H1V1H0V0ZM1,1H2V2H1V1Z\"/></svg>');background-size:.5em;border-radius:.15em;z-index:-1}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-palette{grid-area:1/1/2/3;width:100%;height:100%;z-index:1}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-palette .pcr-palette{border-radius:.15em;width:100%;height:100%}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-palette .pcr-palette:before{position:absolute;content:\"\";top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml;utf8, <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 2 2\"><path fill=\"white\" d=\"M1,0H2V1H1V0ZM0,1H1V2H0V1Z\"/><path fill=\"gray\" d=\"M0,0H1V1H0V0ZM1,1H2V2H1V1Z\"/></svg>');background-size:.5em;border-radius:.15em;z-index:-1}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-chooser{grid-area:2/2/2/2}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-opacity{grid-area:3/2/3/2}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-chooser,.pcr-app[data-theme=nano] .pcr-selection .pcr-color-opacity{height:.5em;margin:0 .6em}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-chooser .pcr-picker,.pcr-app[data-theme=nano] .pcr-selection .pcr-color-opacity .pcr-picker{top:50%;transform:translateY(-50%)}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-chooser .pcr-slider,.pcr-app[data-theme=nano] .pcr-selection .pcr-color-opacity .pcr-slider{flex-grow:1;border-radius:50em}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-chooser .pcr-slider{background:linear-gradient(90deg,red,#ff0,#0f0,#0ff,#00f,#f0f,red)}.pcr-app[data-theme=nano] .pcr-selection .pcr-color-opacity .pcr-slider{background:linear-gradient(90deg,transparent,#000),url('data:image/svg+xml;utf8, <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 2 2\"><path fill=\"white\" d=\"M1,0H2V1H1V0ZM0,1H1V2H0V1Z\"/><path fill=\"gray\" d=\"M0,0H1V1H0V0ZM1,1H2V2H1V1Z\"/></svg>');background-size:100%,.25em}";
 	styleInject(css);
 
-	var css$1 = "@font-face {\n  font-family: 'iconfont';\n  src: url(\"iconfont.eot?t=1583832295186\");\n  /* IE9 */\n  src: url(\"iconfont.eot?t=1583832295186#iefix\") format(\"embedded-opentype\"), url(\"data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAASkAAsAAAAACagAAARXAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDKAqGNIU8ATYCJAMYCw4ABCAFhG0HXhtYCMiusHENiBkGbJfPhSUspyEo3Dwhgqe53nnJJnd/UwJygKwIQbkKWaEqDEogoe//t/O7gTxZkaHeTPxy3p+FJ1upBVV9dyuWckX3wNb5P0La/dqApfNQe3oSBVicVhZZgEmGtQVyw0/N7X/RvJqlOCDSmjZLSTzxiTqx64gmSEvAwbHUr6QHyfvgd+rIAY4HNKCophbeQCboe8im4Cu2GRiZNxPIRpgmVkyZ5QOphO0ViNMFJg1Sl1mKqQ1toQ45MUW8B5F28YJ/A4B39PvxFwyIlEJVYrfacnRyDsb9gNcT3P/PiZV14Mpz4nYaJaYhEQdC3bsIzPQ0pfxJC02hXVsFP/Z/8IMmbq0S/ssLhaQkakzdDbAbMhU/KGJbE1AhzQEV0BSMEkhBY1b1dYmakaNLjfn6aeVvUCl16RqvBSZWfUOsAPqW0Xyqblm4daPkDyLf/M2c6PPzzdu0QQ74XrVgS10JBrbENh6FkgdHcOXLQ0B8/7CUlfOaUPTHUkxayu0qW3bI2t0m8jdvl3S3U4mAPDJufOjIicGcUEW3lyegQFUeK/2A44Tm1UnIO1Tnmc25xXvVvjQaoVmwiZtOlKDFUjRfcUairpuA3JHcpYC8m5Q7lU3IcU0ubHb4fdXZrVJdnGulqKLQDp6CvNnuBvJentq5DI5Ndt3vJvx3mZ2tY0J9GmubOaNNKi+RSW2CmhIfAt+v97+pIFtp4A79w3TqURbGv9zK1xfnXfJ/mX00I6Nj51NBiNGmm1ual5v43FOT1Lyi8Evj61mI5oMH9VmmI6OXXYzpl+hj41WHborOUO6+fNNzdW8er3+sXLnuHXZoAc7HQYt3aYfrpR4yQoKIH5TuOhXO133Lq2UdVXFV/qoEkd9AHZeJS5FAo0E0Jhsv7NopfsGpB7wHYMw1PX1wXamN7UhrbEOvNiA+W4v3l3Z0CNqCNg6HHu99/E5m3ZvGh+bi42AlQGdt/8MBdLiJygcAnYuDcuObVu/u7N/yLfbtPPsba+7sCSU1o75KFQl8fp03JMtfoa0gteSs6ktCOv+ForuMWer09kqJpMqOArWlZOyoXllGB5i/j+9lafunria09beh0DIcSm3jkAk7DSqNeVBrWwzZVKtPb/R1kUCkLkzxRILQywco9PARSr18QibsN6gM8B9qvSKAbFcYLtiYkIJ8IkFpFuWozDKqkMVVWthYuVG7ADGLymnilBE9gEhDIUb1V/fmpqIqImUc0rCYGcCyNEUTXKGmSLdD5TKmagQXUZbtk2fZ2oi+VmFv1CeLKyC3HIGksZAcykHLUE7IwqpobXWW3PfzCyCMRcrSSMzIj2AAQjQorJ8y2wyzUiCnqqupRrZl80sWYwxwGYuWdzuKwCooq8CJlHkao5wP364IyWL1cTxHsmaEmbjS0bTqPvVrK0t5DWTs7nUUUUaKKupoyRdRBS9GvbO4bB1B8BIxWlrDhJWkc7lQMQl/JgAA\") format(\"woff2\"), url(\"iconfont.woff?t=1583832295186\") format(\"woff\"), url(\"iconfont.ttf?t=1583832295186\") format(\"truetype\"), url(\"iconfont.svg?t=1583832295186#iconfont\") format(\"svg\");\n  /* iOS 4.1- */ }\n\n.iconfont {\n  font-family: 'iconfont' !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-remove-col:before {\n  content: '\\e601'; }\n\n.icon-remove-row:before {\n  content: '\\e602'; }\n\n.icon-export:before {\n  content: '\\e604'; }\n\n.icon-add-col:before {\n  content: '\\e603'; }\n\n.icon-add-row:before {\n  content: '\\e600'; }\n\n.json-form__wrapper {\n  display: flex;\n  font-size: var(--font-size);\n  line-height: var(--line-height);\n  width: var(--width);\n  height: var(--height);\n  font-weight: 300;\n  border: 1.5px solid #dcdfe6;\n  box-sizing: border-box;\n  user-select: none; }\n  .json-form__wrapper .json-form__side-bar {\n    width: 60px;\n    line-height: 1.2;\n    flex: 0 0 auto;\n    border-right: 1.5px solid #dcdfe6; }\n    .json-form__wrapper .json-form__side-bar .icon {\n      padding: 5px;\n      text-align: center;\n      cursor: pointer; }\n      .json-form__wrapper .json-form__side-bar .icon:hover {\n        background-color: #e3edfc !important; }\n    .json-form__wrapper .json-form__side-bar .icon-add-row {\n      font-size: 50px; }\n    .json-form__wrapper .json-form__side-bar .icon-add-col {\n      font-size: 50px; }\n    .json-form__wrapper .json-form__side-bar .icon-remove-row {\n      font-size: 45px; }\n    .json-form__wrapper .json-form__side-bar .icon-remove-col {\n      font-size: 45px; }\n    .json-form__wrapper .json-form__side-bar .icon-export {\n      font-size: 45px; }\n  .json-form__wrapper .json-form__main {\n    width: inherit;\n    overflow: scroll; }\n    .json-form__wrapper .json-form__main::-webkit-scrollbar {\n      width: 6px;\n      height: 6px; }\n    .json-form__wrapper .json-form__main::-webkit-scrollbar-thumb {\n      background-color: #b9bbbe;\n      border-radius: 10px;\n      min-height: 32px; }\n    .json-form__wrapper .json-form__main .json-form {\n      display: table;\n      border-collapse: collapse; }\n      .json-form__wrapper .json-form__main .json-form__top-bar {\n        display: table-header-group;\n        cursor: pointer; }\n        .json-form__wrapper .json-form__main .json-form__top-bar__col {\n          border-top: 0 !important;\n          white-space: nowrap; }\n          .json-form__wrapper .json-form__main .json-form__top-bar__col:hover {\n            background-color: #e3edfc !important; }\n      .json-form__wrapper .json-form__main .json-form__data-area {\n        display: table-row-group; }\n        .json-form__wrapper .json-form__main .json-form__data-area__row {\n          display: table-row; }\n          .json-form__wrapper .json-form__main .json-form__data-area__row div[contenteditable] {\n            word-break: keep-all; }\n          .json-form__wrapper .json-form__main .json-form__data-area__row div[contenteditable='false']:empty {\n            padding-bottom: calc(var(--line-height) * var(--font-size) + var(--padding-top)); }\n          .json-form__wrapper .json-form__main .json-form__data-area__row .row--remove,\n          .json-form__wrapper .json-form__main .json-form__data-area__row .col--remove {\n            cursor: grab;\n            background-color: #fd9b9b !important;\n            border-color: #fd9b9b !important; }\n          .json-form__wrapper .json-form__main .json-form__data-area__row:nth-child(2n + 1).bg-stripe {\n            background-color: #f3faff; }\n        .json-form__wrapper .json-form__main .json-form__data-area .row--hover:hover {\n          background-color: #e3edfc !important; }\n      .json-form__wrapper .json-form__main .json-form .col {\n        display: table-cell;\n        border: 1.5px solid #dcdfe6;\n        max-width: 250px;\n        vertical-align: middle;\n        overflow-wrap: break-word;\n        padding: var(--padding-top) var(--padding-right); }\n        .json-form__wrapper .json-form__main .json-form .col:first-child {\n          border-left: 0; }\n  .json-form__wrapper .message-box__wrapper {\n    position: fixed;\n    width: inherit;\n    height: inherit;\n    background-color: #0000001c;\n    display: flex;\n    justify-content: center;\n    align-items: center; }\n    .json-form__wrapper .message-box__wrapper .message-box {\n      width: 300px;\n      min-height: 150px;\n      padding: 10px;\n      font-size: 20px;\n      background-color: #fff;\n      border-radius: 10px;\n      display: flex;\n      flex-direction: column; }\n      .json-form__wrapper .message-box__wrapper .message-box header {\n        font-size: 25px;\n        padding-bottom: 10px; }\n      .json-form__wrapper .message-box__wrapper .message-box main {\n        padding: 10px 5px;\n        display: flex;\n        flex-direction: column; }\n        .json-form__wrapper .message-box__wrapper .message-box main label {\n          display: flex;\n          align-items: center;\n          padding-bottom: 25px;\n          position: relative; }\n          .json-form__wrapper .message-box__wrapper .message-box main label select {\n            width: 200px;\n            padding: 3px 5px;\n            font-size: inherit;\n            border: 1.5px solid #dcdfe6; }\n          .json-form__wrapper .message-box__wrapper .message-box main label input,\n          .json-form__wrapper .message-box__wrapper .message-box main label div[contenteditable] {\n            width: 190px;\n            min-height: 30px;\n            font-size: 20px;\n            padding: 0 5px;\n            border-radius: 5px;\n            border: 1.5px solid #dcdfe6;\n            cursor: text;\n            letter-spacing: 1px; }\n          .json-form__wrapper .message-box__wrapper .message-box main label .advice {\n            position: absolute;\n            bottom: 0;\n            margin: 0;\n            color: #f74343;\n            left: 70px; }\n          .json-form__wrapper .message-box__wrapper .message-box main label .data-component {\n            width: 190px;\n            padding-bottom: 6px; }\n      .json-form__wrapper .message-box__wrapper .message-box footer {\n        display: flex;\n        justify-content: center; }\n        .json-form__wrapper .message-box__wrapper .message-box footer .button {\n          border-radius: 5px;\n          padding: 5px 15px;\n          margin: 0 20px;\n          cursor: pointer; }\n          .json-form__wrapper .message-box__wrapper .message-box footer .button--confirm {\n            color: #409eff;\n            border: 1px solid #409eff; }\n            .json-form__wrapper .message-box__wrapper .message-box footer .button--confirm:hover {\n              color: #fff;\n              background-color: #409eff; }\n          .json-form__wrapper .message-box__wrapper .message-box footer .button--cancel {\n            color: #f55c5c;\n            border: 1px solid #f55c5c; }\n            .json-form__wrapper .message-box__wrapper .message-box footer .button--cancel:hover {\n              color: #fff;\n              background-color: #f55c5c; }\n          .json-form__wrapper .message-box__wrapper .message-box footer .button.disabled:hover {\n            color: #fff;\n            background-color: #f55c5c;\n            border: 1px solid #f55c5c; }\n  .json-form__wrapper .notification__wrapper {\n    transform: translateZ(0); }\n    .json-form__wrapper .notification__wrapper .notification {\n      width: 320px;\n      padding: 20px;\n      box-sizing: border-box;\n      border-radius: 10px;\n      border: 1px solid #dcdfe6;\n      background-color: #fff;\n      box-shadow: 0 0 10px #eeebeb;\n      position: fixed;\n      right: 20px;\n      top: 20px;\n      color: #f51d1d;\n      font-weight: 500; }\n      .json-form__wrapper .notification__wrapper .notification__content {\n        font-size: 20px;\n        overflow-wrap: break-word; }\n\n.choice-box {\n  width: 36px;\n  height: 24px;\n  margin: 0 auto;\n  border: 1.5px solid #dcdfe6;\n  border-radius: 50%;\n  cursor: pointer; }\n  .choice-box .check-mark {\n    visibility: hidden;\n    box-sizing: border-box;\n    width: 16.97056px;\n    height: 33.94113px;\n    border-right: 3.6px solid #57f19a;\n    border-top: 3.6px solid #57f19a;\n    transform-origin: top left;\n    transform: translate(3px, 12px) scaleY(-1) rotate(-45deg); }\n  .choice-box .show {\n    visibility: visible;\n    animation: show 0.6s ease; }\n\n@keyframes show {\n  0% {\n    width: 0;\n    height: 0; }\n  50% {\n    width: 16.97056px;\n    height: 0; }\n  100% {\n    width: 16.97056px;\n    height: 33.94113px; } }\n\n.pickr {\n  display: flex;\n  justify-content: center; }\n";
+	var css$1 = "@font-face {\n  font-family: 'iconfont';\n  src: url(\"iconfont.eot?t=1583832295186\");\n  /* IE9 */\n  src: url(\"iconfont.eot?t=1583832295186#iefix\") format(\"embedded-opentype\"), url(\"data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAASkAAsAAAAACagAAARXAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDKAqGNIU8ATYCJAMYCw4ABCAFhG0HXhtYCMiusHENiBkGbJfPhSUspyEo3Dwhgqe53nnJJnd/UwJygKwIQbkKWaEqDEogoe//t/O7gTxZkaHeTPxy3p+FJ1upBVV9dyuWckX3wNb5P0La/dqApfNQe3oSBVicVhZZgEmGtQVyw0/N7X/RvJqlOCDSmjZLSTzxiTqx64gmSEvAwbHUr6QHyfvgd+rIAY4HNKCophbeQCboe8im4Cu2GRiZNxPIRpgmVkyZ5QOphO0ViNMFJg1Sl1mKqQ1toQ45MUW8B5F28YJ/A4B39PvxFwyIlEJVYrfacnRyDsb9gNcT3P/PiZV14Mpz4nYaJaYhEQdC3bsIzPQ0pfxJC02hXVsFP/Z/8IMmbq0S/ssLhaQkakzdDbAbMhU/KGJbE1AhzQEV0BSMEkhBY1b1dYmakaNLjfn6aeVvUCl16RqvBSZWfUOsAPqW0Xyqblm4daPkDyLf/M2c6PPzzdu0QQ74XrVgS10JBrbENh6FkgdHcOXLQ0B8/7CUlfOaUPTHUkxayu0qW3bI2t0m8jdvl3S3U4mAPDJufOjIicGcUEW3lyegQFUeK/2A44Tm1UnIO1Tnmc25xXvVvjQaoVmwiZtOlKDFUjRfcUairpuA3JHcpYC8m5Q7lU3IcU0ubHb4fdXZrVJdnGulqKLQDp6CvNnuBvJentq5DI5Ndt3vJvx3mZ2tY0J9GmubOaNNKi+RSW2CmhIfAt+v97+pIFtp4A79w3TqURbGv9zK1xfnXfJ/mX00I6Nj51NBiNGmm1ual5v43FOT1Lyi8Evj61mI5oMH9VmmI6OXXYzpl+hj41WHborOUO6+fNNzdW8er3+sXLnuHXZoAc7HQYt3aYfrpR4yQoKIH5TuOhXO133Lq2UdVXFV/qoEkd9AHZeJS5FAo0E0Jhsv7NopfsGpB7wHYMw1PX1wXamN7UhrbEOvNiA+W4v3l3Z0CNqCNg6HHu99/E5m3ZvGh+bi42AlQGdt/8MBdLiJygcAnYuDcuObVu/u7N/yLfbtPPsba+7sCSU1o75KFQl8fp03JMtfoa0gteSs6ktCOv+ForuMWer09kqJpMqOArWlZOyoXllGB5i/j+9lafunria09beh0DIcSm3jkAk7DSqNeVBrWwzZVKtPb/R1kUCkLkzxRILQywco9PARSr18QibsN6gM8B9qvSKAbFcYLtiYkIJ8IkFpFuWozDKqkMVVWthYuVG7ADGLymnilBE9gEhDIUb1V/fmpqIqImUc0rCYGcCyNEUTXKGmSLdD5TKmagQXUZbtk2fZ2oi+VmFv1CeLKyC3HIGksZAcykHLUE7IwqpobXWW3PfzCyCMRcrSSMzIj2AAQjQorJ8y2wyzUiCnqqupRrZl80sWYwxwGYuWdzuKwCooq8CJlHkao5wP364IyWL1cTxHsmaEmbjS0bTqPvVrK0t5DWTs7nUUUUaKKupoyRdRBS9GvbO4bB1B8BIxWlrDhJWkc7lQMQl/JgAA\") format(\"woff2\"), url(\"iconfont.woff?t=1583832295186\") format(\"woff\"), url(\"iconfont.ttf?t=1583832295186\") format(\"truetype\"), url(\"iconfont.svg?t=1583832295186#iconfont\") format(\"svg\");\n  /* iOS 4.1- */ }\n\n.iconfont {\n  font-family: 'iconfont' !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-remove-col:before {\n  content: '\\e601'; }\n\n.icon-remove-row:before {\n  content: '\\e602'; }\n\n.icon-export:before {\n  content: '\\e604'; }\n\n.icon-add-col:before {\n  content: '\\e603'; }\n\n.icon-add-row:before {\n  content: '\\e600'; }\n\n.json-form__wrapper {\n  display: flex;\n  font-size: var(--font-size);\n  font-weight: 300;\n  line-height: var(--line-height);\n  width: var(--width);\n  height: var(--height);\n  box-sizing: border-box;\n  border: 1.5px solid #dcdfe6;\n  transform: translateZ(0);\n  user-select: none; }\n  .json-form__wrapper .json-form__side-bar {\n    flex: 0 0 auto;\n    line-height: 1.2;\n    width: 60px;\n    border-right: 1.5px solid #dcdfe6; }\n    .json-form__wrapper .json-form__side-bar .icon {\n      text-align: center;\n      padding: 5px;\n      cursor: pointer; }\n      .json-form__wrapper .json-form__side-bar .icon:hover {\n        background-color: #e3edfc !important; }\n    .json-form__wrapper .json-form__side-bar .icon-add-row,\n    .json-form__wrapper .json-form__side-bar .icon-add-col {\n      font-size: 50px; }\n    .json-form__wrapper .json-form__side-bar .icon-remove-row,\n    .json-form__wrapper .json-form__side-bar .icon-remove-col {\n      font-size: 45px; }\n  .json-form__wrapper .json-form__main {\n    overflow: scroll;\n    width: inherit; }\n    .json-form__wrapper .json-form__main::-webkit-scrollbar {\n      width: 6px;\n      height: 6px; }\n    .json-form__wrapper .json-form__main::-webkit-scrollbar-thumb {\n      background-color: #b9bbbe;\n      border-radius: 10px;\n      min-height: 32px; }\n    .json-form__wrapper .json-form__main .json-form {\n      display: table;\n      border-collapse: collapse; }\n      .json-form__wrapper .json-form__main .json-form__top-bar {\n        display: table-header-group;\n        cursor: pointer; }\n        .json-form__wrapper .json-form__main .json-form__top-bar__col {\n          border-top: 0 !important;\n          white-space: nowrap; }\n          .json-form__wrapper .json-form__main .json-form__top-bar__col:hover {\n            background-color: #e3edfc !important; }\n      .json-form__wrapper .json-form__main .json-form__data-area {\n        display: table-row-group; }\n        .json-form__wrapper .json-form__main .json-form__data-area__row {\n          display: table-row; }\n          .json-form__wrapper .json-form__main .json-form__data-area__row div[contenteditable] {\n            word-break: keep-all; }\n          .json-form__wrapper .json-form__main .json-form__data-area__row div[contenteditable='false']:empty {\n            padding-bottom: calc(var(--line-height) * var(--font-size) + var(--padding-top)); }\n          .json-form__wrapper .json-form__main .json-form__data-area__row .row--remove,\n          .json-form__wrapper .json-form__main .json-form__data-area__row .col--remove {\n            cursor: grab;\n            background-color: #fd9b9b !important;\n            border-color: #fd9b9b !important; }\n          .json-form__wrapper .json-form__main .json-form__data-area__row:nth-child(2n + 1).bg-stripe {\n            background-color: #f3faff; }\n        .json-form__wrapper .json-form__main .json-form__data-area .row--hover:hover {\n          background-color: #e3edfc !important; }\n      .json-form__wrapper .json-form__main .json-form .col {\n        display: table-cell;\n        vertical-align: middle;\n        max-width: 250px;\n        border: 1.5px solid #dcdfe6;\n        padding: var(--padding-top) var(--padding-right);\n        overflow-wrap: break-word; }\n        .json-form__wrapper .json-form__main .json-form .col:first-child {\n          border-left: 0; }\n  .json-form__wrapper .message-box__wrapper {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: fixed;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    background-color: #0000001c; }\n    .json-form__wrapper .message-box__wrapper .message-box {\n      display: flex;\n      flex-direction: column;\n      font-size: 20px;\n      width: 300px;\n      min-height: 150px;\n      padding: 10px;\n      border-radius: 10px;\n      background-color: #fff; }\n      .json-form__wrapper .message-box__wrapper .message-box header {\n        font-size: 25px;\n        padding-bottom: 10px; }\n      .json-form__wrapper .message-box__wrapper .message-box main {\n        display: flex;\n        flex-direction: column;\n        padding: 10px 5px; }\n        .json-form__wrapper .message-box__wrapper .message-box main label {\n          display: flex;\n          align-items: center;\n          position: relative;\n          padding-bottom: 30px; }\n          .json-form__wrapper .message-box__wrapper .message-box main label select {\n            font-size: inherit;\n            width: 200px;\n            padding: 3px 5px;\n            border: 1.5px solid #dcdfe6; }\n          .json-form__wrapper .message-box__wrapper .message-box main label input,\n          .json-form__wrapper .message-box__wrapper .message-box main label div[contenteditable] {\n            font-size: 20px;\n            width: 190px;\n            min-height: 30px;\n            padding: 0 5px;\n            border-radius: 5px;\n            border: 1.5px solid #dcdfe6;\n            letter-spacing: 1px;\n            outline: none;\n            cursor: text; }\n            .json-form__wrapper .message-box__wrapper .message-box main label input:hover,\n            .json-form__wrapper .message-box__wrapper .message-box main label div[contenteditable]:hover {\n              box-shadow: 0 0 5px #aad7f4;\n              border: 1.5px solid #aad7f4; }\n          .json-form__wrapper .message-box__wrapper .message-box main label .advice {\n            position: absolute;\n            bottom: 0;\n            margin: 0;\n            color: #f74343;\n            left: 70px; }\n          .json-form__wrapper .message-box__wrapper .message-box main label .data-component {\n            width: 190px;\n            padding-bottom: 6px; }\n      .json-form__wrapper .message-box__wrapper .message-box footer {\n        display: flex;\n        justify-content: center; }\n        .json-form__wrapper .message-box__wrapper .message-box footer .button {\n          border-radius: 5px;\n          padding: 5px 15px;\n          margin: 0 20px;\n          cursor: pointer; }\n          .json-form__wrapper .message-box__wrapper .message-box footer .button--confirm {\n            color: #409eff;\n            border: 1px solid #409eff; }\n            .json-form__wrapper .message-box__wrapper .message-box footer .button--confirm:hover {\n              color: #fff;\n              background-color: #409eff; }\n          .json-form__wrapper .message-box__wrapper .message-box footer .button--cancel {\n            color: #f55c5c;\n            border: 1px solid #f55c5c; }\n            .json-form__wrapper .message-box__wrapper .message-box footer .button--cancel:hover {\n              color: #fff;\n              background-color: #f55c5c; }\n          .json-form__wrapper .message-box__wrapper .message-box footer .button.disabled:hover {\n            color: #fff;\n            background-color: #f55c5c;\n            border: 1px solid #f55c5c; }\n  .json-form__wrapper .notification__wrapper {\n    transform: translateZ(0); }\n    .json-form__wrapper .notification__wrapper .notification {\n      position: fixed;\n      right: 20px;\n      top: 20px;\n      box-sizing: border-box;\n      color: #f51d1d;\n      font-weight: 500;\n      width: 320px;\n      padding: 20px;\n      border-radius: 10px;\n      border: 1px solid #dcdfe6;\n      background-color: #fff;\n      box-shadow: 0 0 10px #eeebeb; }\n      .json-form__wrapper .notification__wrapper .notification__content {\n        font-size: 20px;\n        overflow-wrap: break-word; }\n\n.choice-box {\n  width: 36px;\n  height: 24px;\n  margin: 0 auto;\n  border: 1.5px solid #dcdfe6;\n  border-radius: 50%;\n  cursor: pointer; }\n  .choice-box .check-mark {\n    visibility: hidden;\n    box-sizing: border-box;\n    width: 16.97056px;\n    height: 33.94113px;\n    border-right: 3.6px solid #57f19a;\n    border-top: 3.6px solid #57f19a;\n    transform-origin: top left;\n    transform: translate(3px, 12px) scaleY(-1) rotate(-45deg); }\n  .choice-box .show {\n    visibility: visible;\n    animation: show 0.6s ease; }\n\n@keyframes show {\n  0% {\n    width: 0;\n    height: 0; }\n  50% {\n    width: 16.97056px;\n    height: 0; }\n  100% {\n    width: 16.97056px;\n    height: 33.94113px; } }\n\n.pickr {\n  display: flex;\n  justify-content: center; }\n";
 	styleInject(css$1);
 
 	const subscriber_queue = [];
@@ -972,7 +972,7 @@
 	/* src\components\sideBar\index.svelte generated by Svelte v3.19.1 */
 
 	function create_fragment$1(ctx) {
-		let div5;
+		let div4;
 		let div0;
 		let t0;
 		let div1;
@@ -980,13 +980,11 @@
 		let div2;
 		let t2;
 		let div3;
-		let t3;
-		let div4;
 		let dispose;
 
 		return {
 			c() {
-				div5 = element("div");
+				div4 = element("div");
 				div0 = element("div");
 				t0 = space();
 				div1 = element("div");
@@ -994,40 +992,34 @@
 				div2 = element("div");
 				t2 = space();
 				div3 = element("div");
-				t3 = space();
-				div4 = element("div");
 				attr(div0, "class", "icon iconfont icon-add-row");
 				attr(div1, "class", "icon iconfont icon-add-col");
 				attr(div2, "class", "icon iconfont icon-remove-row");
 				attr(div3, "class", "icon iconfont icon-remove-col");
-				attr(div4, "class", "icon iconfont icon-export");
-				attr(div5, "class", "json-form__side-bar");
+				attr(div4, "class", "json-form__side-bar");
 			},
 			m(target, anchor) {
-				insert(target, div5, anchor);
-				append(div5, div0);
-				append(div5, t0);
-				append(div5, div1);
-				append(div5, t1);
-				append(div5, div2);
-				append(div5, t2);
-				append(div5, div3);
-				append(div5, t3);
-				append(div5, div4);
+				insert(target, div4, anchor);
+				append(div4, div0);
+				append(div4, t0);
+				append(div4, div1);
+				append(div4, t1);
+				append(div4, div2);
+				append(div4, t2);
+				append(div4, div3);
 
 				dispose = [
 					listen(div0, "click", /*addRow*/ ctx[0]),
 					listen(div1, "click", /*addCol*/ ctx[1]),
 					listen(div2, "click", /*removeRow*/ ctx[2]),
-					listen(div3, "click", /*removeCol*/ ctx[3]),
-					listen(div4, "click", /*exportJson*/ ctx[4])
+					listen(div3, "click", /*removeCol*/ ctx[3])
 				];
 			},
 			p: noop,
 			i: noop,
 			o: noop,
 			d(detaching) {
-				if (detaching) detach(div5);
+				if (detaching) detach(div4);
 				run_all(dispose);
 			}
 		};
@@ -1036,8 +1028,8 @@
 	function instance$1($$self, $$props, $$invalidate) {
 		let $message;
 		let $condition;
-		component_subscribe($$self, message, $$value => $$invalidate(7, $message = $$value));
-		component_subscribe($$self, condition, $$value => $$invalidate(8, $condition = $$value));
+		component_subscribe($$self, message, $$value => $$invalidate(6, $message = $$value));
+		component_subscribe($$self, condition, $$value => $$invalidate(7, $condition = $$value));
 		let { json } = $$props;
 		let { colList } = $$props;
 
@@ -1067,7 +1059,7 @@
 				}
 			});
 
-			$$invalidate(5, json = [...json, data]);
+			$$invalidate(4, json = [...json, data]);
 		}
 
 		function addCol() {
@@ -1083,7 +1075,7 @@
 				title: "新增列",
 				value: null,
 				fn: () => {
-					$$invalidate(5, json = json.map(row => {
+					$$invalidate(4, json = json.map(row => {
 						const { key, name, type, value } = $message.value;
 						row[key] = { name, type, value };
 						return row;
@@ -1108,23 +1100,18 @@
 			}
 		}
 
-		function exportJson() {
-			condition.reset();
-			console.log(JSON.stringify(json, null, 2));
-		}
-
 		$$self.$set = $$props => {
-			if ("json" in $$props) $$invalidate(5, json = $$props.json);
-			if ("colList" in $$props) $$invalidate(6, colList = $$props.colList);
+			if ("json" in $$props) $$invalidate(4, json = $$props.json);
+			if ("colList" in $$props) $$invalidate(5, colList = $$props.colList);
 		};
 
-		return [addRow, addCol, removeRow, removeCol, exportJson, json, colList];
+		return [addRow, addCol, removeRow, removeCol, json, colList];
 	}
 
 	class SideBar extends SvelteComponent {
 		constructor(options) {
 			super();
-			init(this, options, instance$1, create_fragment$1, safe_not_equal, { json: 5, colList: 6 });
+			init(this, options, instance$1, create_fragment$1, safe_not_equal, { json: 4, colList: 5 });
 		}
 	}
 
@@ -1629,8 +1616,10 @@
 
 		$$self.$$.update = () => {
 			if ($$self.$$.dirty & /*options, $condition, pickr*/ 112) {
-				 if (!options.editable || $condition) {
-					pickr && pickr.destroy();
+				 if (options.editable && !$condition) {
+					pickr && pickr.enable();
+				} else {
+					pickr && pickr.disable();
 				}
 			}
 		};
@@ -3639,6 +3628,7 @@
 	    options = override(defaultOptions, options);
 	    return options;
 	}
+	//# sourceMappingURL=json-form.esm.js.map
 
 	const row1 = {
 	    name: {
@@ -3712,11 +3702,23 @@
 	];
 	const jsonForm = createForm('#app', JSON.stringify(json), { style: { background: 'stripe' } });
 
-	const btn = document.getElementById('switch');
-	btn.addEventListener('click', () => {
-	    let condition = jsonForm.getOptions().editable;
-	    jsonForm.setOptions({ editable: !condition });
-	    console.log(jsonForm.getOptions());
+	const btn1 = document.getElementById('editable');
+	btn1.addEventListener('click', () => {
+	    let editable = jsonForm.getOptions().editable;
+	    jsonForm.setOptions({ editable: !editable });
+	});
+
+	const btn2 = document.getElementById('background');
+	btn2.addEventListener('click', () => {
+	    let background = jsonForm.getOptions().style.background;
+	    jsonForm.setOptions({ style: { background: background === 'stripe' ? 'none' : 'stripe' } });
+	});
+
+	const btn3 = document.getElementById('json');
+	btn3.addEventListener('click', () => {
+	    let json = jsonForm.getJson();
+	    console.log(json);
+	    console.log(JSON.stringify(json, null, 2));
 	});
 
 }());
