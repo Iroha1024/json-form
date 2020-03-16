@@ -3,7 +3,6 @@
     <div class="icon iconfont icon-add-col" on:click={addCol} />
     <div class="icon iconfont icon-remove-row" on:click={removeRow} />
     <div class="icon iconfont icon-remove-col" on:click={removeCol} />
-    <div class="icon iconfont icon-export" on:click={exportJson} />
 </div>
 
 <script>
@@ -79,10 +78,5 @@
         } else {
             condition.set('remove-col')
         }
-    }
-
-    function exportJson() {
-        condition.reset()
-        console.log(JSON.stringify(json, null, 2))
     }
 </script>
